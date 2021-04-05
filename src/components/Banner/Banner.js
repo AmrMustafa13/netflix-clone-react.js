@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { IMAGE_BASE_URL } from "../../requests";
+import { IMAGE_BASE_URL_BANNER } from "../../requests";
 import "./Banner.css";
 
 class Banner extends Component {
@@ -43,7 +43,7 @@ class Banner extends Component {
       <header
         className="banner"
         style={{
-          background: `url("${IMAGE_BASE_URL}${
+          background: `url("${IMAGE_BASE_URL_BANNER}${
             this.state.movie && this.state.movie.backdrop_path
           }")`,
         }}

@@ -1,6 +1,8 @@
 const API_URL = "https://api.themoviedb.org/3/";
 const API_KEY = "be929698aa8a9595adcab58c7a7a12fa";
-const IMAGE_BASE_URL = "http://image.tmdb.org/t/p/original/";
+const IMAGE_BASE_URL_ROW = `http://image.tmdb.org/t/p/w500/`;
+const IMAGE_BASE_URL_BANNER = `http://image.tmdb.org/t/p/w1280/`;
+
 
 const requests = {
   fetchTrending: `${API_URL}trending/all/week?api_key=${API_KEY}&language=en-US`,
@@ -24,4 +26,4 @@ const titles = [
   "Action Movies",
 ];
 
-export { requests, IMAGE_BASE_URL, titles };
+export { requests, IMAGE_BASE_URL_ROW, IMAGE_BASE_URL_BANNER, titles };

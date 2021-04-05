@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Row.css";
-import { IMAGE_BASE_URL } from "../../requests";
+import { IMAGE_BASE_URL_ROW } from "../../requests";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
 
@@ -73,8 +73,8 @@ class Row extends Component {
                 key={movie.id}
                 src={
                   !this.props.isLarge
-                    ? `${IMAGE_BASE_URL}${movie.backdrop_path}`
-                    : `${IMAGE_BASE_URL}${movie.poster_path}`
+                    ? `${IMAGE_BASE_URL_ROW}${movie.backdrop_path}`
+                    : `${IMAGE_BASE_URL_ROW}${movie.poster_path}`
                 }
               />
             );
