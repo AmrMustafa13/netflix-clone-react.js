@@ -1,7 +1,7 @@
 const API_URL = "https://api.themoviedb.org/3/";
 const API_KEY = "be929698aa8a9595adcab58c7a7a12fa";
-const IMAGE_BASE_URL_ROW = `http://image.tmdb.org/t/p/w500/`;
-const IMAGE_BASE_URL_BANNER = `http://image.tmdb.org/t/p/w1280/`;
+const IMAGE_BASE_URL_ROW = `https://image.tmdb.org/t/p/w500/`;
+const IMAGE_BASE_URL_BANNER = `https://image.tmdb.org/t/p/w1280/`;
 
 
 const requests = {
