@@ -3,6 +3,7 @@ import "./Row.css";
 import { IMAGE_BASE_URL_ROW } from "../../requests";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
+import axios from "axios";
 
 class Row extends Component {
   state = {
@@ -19,17 +20,23 @@ class Row extends Component {
     }
   }
 
-  fetchMovies = async (fetchUrl) => {
-    const response = await fetch(fetchUrl);
-    const data = await response.json();
-    this.setState(
-      {
-        movies: data.results,
-      },
-      () => {
-        localStorage.setItem(`${this.props.title}`, JSON.stringify(this.state));
-      }
-    );
+  fetchMovies = (fetchUrl) => {
+    axios
+      .get(fetchUrl)
+      .then((res) => {
+        this.setState(
+          {
+            movies: res.data.results,
+          },
+          () => {
+            localStorage.setItem(
+              `${this.props.title}`,
+              JSON.stringify(this.state)
+            );
+          }
+        );
+      })
+      .catch((err) => console.log(`Error : ${err}`));
   };
 
   handleClick = (movie) => {
