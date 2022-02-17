@@ -73,9 +73,8 @@ class Row extends Component {
             return (
               <img
                 onClick={() => this.handleClick(movie)}
-                className={`row-poster ${
-                  this.props.isLarge && "row-poster-large"
-                }`}
+                className={`row-poster ${this.props.isLarge && "row-poster-large"
+                  }`}
                 alt={movie.name ? movie.name : "poster"}
                 key={movie.id}
                 src={

@@ -5,7 +5,7 @@ import Row from "./components/Row/Row";
 import Banner from "./components/Banner/Banner";
 import NavBar from "./components/NavBar/NavBar";
 
-function App() {
+const App = _ => {
   return (
     <div className="App">
       <NavBar />
